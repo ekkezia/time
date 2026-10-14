@@ -37,10 +37,10 @@ void loop() {
 
   if (isIncreasing) {
     // increase - fade in
-    ledState = (floor((progressRatio) * maximumValue));
+    ledState = (floor(easeInSine(progressRatio) * maximumValue));
   } else {
     // decrease - fade out
-    ledState = (floor((1. - (progressRatio)) * maximumValue));
+    ledState = (floor((1. - (easeOutSine(progressRatio))) * maximumValue));
   }
 
   Serial.println(progressRatio);
