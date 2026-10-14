@@ -1,3 +1,7 @@
+// COmpare the top layer to bottom layer of the led matrix
+// top one one is affected by interrupt, it shoould turn on/off when you press button
+// interrupting the fade in/out effect
+// the bottom layer just stays fading in / out
 unsigned long globalStartTime;
 unsigned long startTime;
 const byte interruptPin = 2;  // input pin that the interruption will be attached to
